@@ -45,7 +45,7 @@ ComuneRepository comuneRepo;
 				.with(provinceItalianeCsvSchema)
 				.readValues(fileProvince);
 		for (Object o : valueReader.readAll()) {
-			//System.out.println(o);
+			System.out.println(o);
 			Provincia provincia = new Provincia();
 			BeanUtils.copyProperties(o, provincia);
 			provinciaRepo.save(provincia);
@@ -63,7 +63,7 @@ ComuneRepository comuneRepo;
 				.with(comuniCsvSchema)
 				.readValues(fileComuni);
 		for (Object o : valueReader2.readAll()) {
-			//System.out.println(o);
+			System.out.println(o);
 			Comune comune = new Comune();
 			BeanUtils.copyProperties(o, comune);
 			comuneRepo.save(comune);
